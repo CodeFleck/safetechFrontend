@@ -14,12 +14,13 @@
       <tr *ngFor="let user of users" >
         <td>{{user.id}}</td>
         <td>{{user.name}}</td>
-        <td><button type="button" class="btn btn-primary">Show Details</button></td>
+        <td><button type="button" class="btn btn-primary" (click)="viewUser(user.id)">Show Details</button></td>
       </tr>
       </tbody>
     </table>
   </div>
   <div   class="col-md-6">
-    <app-adduser *ngIf="action === 'add'"  [user]="selectedUser"></app-adduser>
+    <app-adduser *ngIf="action === 'add'"  [user]="selectedUser" (userAddedEvent)="refreshData()"></app-adduser>
+    <app-viewuser *ngIf="action === 'view'" [user]="selectedUser" (userDeletedEvent)="refreshData()"></app-viewuser>
   </div>
 </div>
