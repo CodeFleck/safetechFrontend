@@ -28,4 +28,8 @@ export class HttpClientService {
   getBooks() {
     return this.httpClient.get<Product[]>('http://localhost:8080/products/');
   }
+
+  addBook(newBook: Product) {
+    return this.httpClient.post<Product>('http://localhost:8080/products/add', newBook);
+  }
 }
