@@ -1,12 +1,11 @@
-<h1>Books Admin</h1>
-<a class="btn btn-primary mb-3" (click)="addBook()">Add New Book</a>
+<h3>Produtos</h3>
 <div class="container row">
   <div class="col-md-6">
     <table class="table">
       <thead>
         <tr>
           <th>ID</th>
-          <th>Book Name</th>
+          <th>Nome</th>
           <th></th>
         </tr>
       </thead>
@@ -15,10 +14,11 @@
           <td>{{book.id}}</td>
           <td>{{book.name}}</td>
           <td>
-            <button type="button" class="btn btn-primary" (click)="viewBook(book.id)">Show Details</button>
+            <button type="button" class="btn btn-primary" (click)="viewBook(book.id)">Detalhes</button>
           </td>
         </tr>
       </tbody>
+      <a class="btn btn-primary mb-3 adicionar" (click)="addBook()">Adicionar</a>
     </table>
   </div>
   <div class="col-md-6">

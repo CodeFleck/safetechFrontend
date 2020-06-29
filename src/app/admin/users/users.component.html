@@ -1,12 +1,11 @@
-<h1>Users Admin</h1>
-<a class="btn btn-primary mb-3" (click)="addUser()">add</a>
+<h3>Usuários</h3>
 <div class="container row">
     <div   class="col-md-6">
     <table class="table">
       <thead>
       <tr>
         <th>ID</th>
-        <th>Name</th>
+        <th>Nome</th>
         <th></th>
       </tr>
       </thead>
@@ -14,9 +13,10 @@
       <tr *ngFor="let user of users" >
         <td>{{user.id}}</td>
         <td>{{user.name}}</td>
-        <td><button type="button" class="btn btn-primary" (click)="viewUser(user.id)">Show Details</button></td>
+        <td><button type="button" class="btn btn-primary" (click)="viewUser(user.id)">Detalhes</button></td>
       </tr>
       </tbody>
+      <a class="btn btn-primary mb-3 adicionar" (click)="addUser()">Adicionar</a>
     </table>
   </div>
   <div   class="col-md-6">
